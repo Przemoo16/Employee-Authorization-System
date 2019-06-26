@@ -1,0 +1,784 @@
+<Background_IMG@Image>
+	source: 'Images/background.jpg'
+	allow_stretch: False
+	keep_ratio: True
+	size_hint: 1.0, 1.0
+
+<MenuButton@MenuImageButton>
+	source: 'Images/button.png'
+	size_hint: 0.5, 0.13
+	allow_stretch: False
+	keep_ratio: True
+
+<MachineButton@MachineImageButton>
+	source: 'Images/button.png'
+	size_hint: 0.5, 0.13
+	allow_stretch: False
+	keep_ratio: True
+
+<ArrowButton@ArrowImageButton>
+	source: 'Images/back_arrow.png'
+	size_hint: 0.15, 0.15
+	pos_hint: {"center_x": 0.85, "center_y": 0.75}
+	allow_stretch: False
+	keep_ratio: True
+
+<SendButton@SendImageButton>
+	source: 'Images/send.png'
+	size_hint: 0.15, 0.15
+	allow_stretch: False
+	keep_ratio: True
+
+<MyImage@Image>
+	allow_stretch: False
+	keep_ratio: True
+
+<KeyButton@Button>
+	size_hint: 0.15, 0.10
+
+<MenuScreen>:
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		MyImage:
+			source: 'Images/menu_text.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+		
+		MenuButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.68}
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "machine1"
+
+		MyImage:
+			source: 'Images/machine1.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.68}
+			size_hint: 0.4, 0.4
+
+		MenuButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.51}
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "machine2"
+
+		MyImage:
+			source: 'Images/machine2.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.51}
+			size_hint: 0.4, 0.4
+
+		MenuButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.34}
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "machine3"
+
+		MyImage:
+			source: 'Images/machine3.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.34}
+			size_hint: 0.4, 0.4
+
+		MenuButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.17}
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "add_emp"
+
+		MyImage:
+			source: 'Images/new_menu.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.17}
+			size_hint: 0.45, 0.45
+
+		WifiImageButton:
+			source: 'Images/wifi.png'
+			pos_hint: {"center_x": 0.85, "center_y": 0.8}
+			size_hint: 0.15, 0.15
+			allow_stretch: False
+			keep_ratio: True
+			on_release: 
+				root.open_popup()
+
+<Machine1>:
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		MyImage:
+			source: 'Images/choose.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+
+		MachineButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.6}
+			on_press: root.m1_rfid(self, self.state)
+			state: 'down'
+
+		MyImage:
+			source: 'Images/rfid_text.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.6}
+			size_hint: 0.18, 0.18
+
+		MachineButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.4}
+			on_press: root.m1_pin(self, self.state)
+
+		MyImage:
+			source: 'Images/pin_text.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.4}
+			size_hint: 0.15, 0.15
+
+		MenuButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.2}
+			on_release: 
+				root.manager.transition.direction = "left"
+				root.manager.current = "pin1"
+
+		MyImage:
+			source: 'Images/change_pin.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.2}
+			size_hint: 0.45, 0.45
+
+		ArrowButton:
+			on_release: 
+				root.manager.transition.direction = "right"
+				root.manager.current = "menu"
+
+<Machine2>:
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		MyImage:
+			source: 'Images/choose.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+
+		MachineButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.6}
+			on_press: root.m2_rfid(self, self.state)
+
+		MyImage:
+			source: 'Images/rfid_text.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.6}
+			size_hint: 0.18, 0.18
+
+		MachineButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.4}
+			on_press: root.m2_pin(self, self.state)
+			state: 'down'
+
+		MyImage:
+			source: 'Images/pin_text.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.4}
+			size_hint: 0.15, 0.15
+
+		MenuButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.2}
+			on_release: 
+				root.manager.transition.direction = "left"
+				root.manager.current = "pin2"
+
+		MyImage:
+			source: 'Images/change_pin.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.2}
+			size_hint: 0.45, 0.45
+
+		ArrowButton:
+			on_release: 
+				root.manager.transition.direction = "right"
+				root.manager.current = "menu"
+
+<Machine3>:
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		MyImage:
+			source: 'Images/choose.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+
+		MachineButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.6}
+			on_press: root.m3_rfid(self, self.state)
+			state: 'down'
+
+		MyImage:
+			source: 'Images/rfid_text.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.6}
+			size_hint: 0.18, 0.18
+
+		MachineButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.4}
+			on_press: root.m3_pin(self, self.state)
+			state: 'down'
+
+		MyImage:
+			source: 'Images/pin_text.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.4}
+			size_hint: 0.15, 0.15
+
+		MenuButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.2}
+			on_release: 
+				root.manager.transition.direction = "left"
+				root.manager.current = "pin3"
+
+		MyImage:
+			source: 'Images/change_pin.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.2}
+			size_hint: 0.45, 0.45
+
+		ArrowButton:
+			on_release: 
+				root.manager.transition.direction = "right"
+				root.manager.current = "menu"
+<Pin1>:
+	on_leave: 
+		root.clear_label()
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		KeyButton:
+			text: '1'
+			pos_hint: {"center_x": 0.2, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '2'
+			pos_hint: {"center_x": 0.4, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '3'
+			pos_hint: {"center_x": 0.6, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'A'
+			pos_hint: {"center_x": 0.8, "center_y": 0.6}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '4'
+			pos_hint: {"center_x": 0.2, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '5'
+			pos_hint: {"center_x": 0.4, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '6'
+			pos_hint: {"center_x": 0.6, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'B'
+			pos_hint: {"center_x": 0.8, "center_y": 0.45}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '7'
+			pos_hint: {"center_x": 0.2, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '8'
+			pos_hint: {"center_x": 0.4, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '9'
+			pos_hint: {"center_x": 0.6, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'C'
+			pos_hint: {"center_x": 0.8, "center_y": 0.3}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '*'
+			pos_hint: {"center_x": 0.2, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '0'
+			pos_hint: {"center_x": 0.4, "center_y": 0.15}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '#'
+			pos_hint: {"center_x": 0.6, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'D'
+			pos_hint: {"center_x": 0.8, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		MyImage:
+			source: 'Images/m1.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+
+		Label:
+			text: ''
+			halign: 'right'
+    		valign: 'middle'
+			id: label_pin
+			font_size: '20sp'
+			pos_hint: {"center_x": 0.5, "center_y": 0.75}
+
+		SendButton:
+			pos_hint: {"center_x": 0.15, "center_y": 0.75}
+			on_release: 
+				root.send_pin()
+
+		ArrowButton:
+			on_release: 
+				root.manager.transition.direction = "right"
+				root.manager.current = "machine1"
+
+<Pin2>:
+	on_leave: 
+		root.clear_label()
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		KeyButton:
+			text: '1'
+			pos_hint: {"center_x": 0.2, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '2'
+			pos_hint: {"center_x": 0.4, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '3'
+			pos_hint: {"center_x": 0.6, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'A'
+			pos_hint: {"center_x": 0.8, "center_y": 0.6}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '4'
+			pos_hint: {"center_x": 0.2, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '5'
+			pos_hint: {"center_x": 0.4, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '6'
+			pos_hint: {"center_x": 0.6, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'B'
+			pos_hint: {"center_x": 0.8, "center_y": 0.45}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '7'
+			pos_hint: {"center_x": 0.2, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '8'
+			pos_hint: {"center_x": 0.4, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '9'
+			pos_hint: {"center_x": 0.6, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'C'
+			pos_hint: {"center_x": 0.8, "center_y": 0.3}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '*'
+			pos_hint: {"center_x": 0.2, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '0'
+			pos_hint: {"center_x": 0.4, "center_y": 0.15}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '#'
+			pos_hint: {"center_x": 0.6, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'D'
+			pos_hint: {"center_x": 0.8, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		MyImage:
+			source: 'Images/m1.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+
+		Label:
+			text: ''
+			halign: 'right'
+    		valign: 'middle'
+			id: label_pin
+			font_size: '20sp'
+			pos_hint: {"center_x": 0.5, "center_y": 0.75}
+
+		SendButton:
+			pos_hint: {"center_x": 0.15, "center_y": 0.75}
+			on_release: 
+				root.send_pin()
+
+		ArrowButton:
+			on_release: 
+				root.manager.transition.direction = "right"
+				root.manager.current = "machine2"
+
+<Pin3>:
+	on_leave: 
+		root.clear_label()
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		KeyButton:
+			text: '1'
+			pos_hint: {"center_x": 0.2, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '2'
+			pos_hint: {"center_x": 0.4, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '3'
+			pos_hint: {"center_x": 0.6, "center_y": 0.6}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'A'
+			pos_hint: {"center_x": 0.8, "center_y": 0.6}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '4'
+			pos_hint: {"center_x": 0.2, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '5'
+			pos_hint: {"center_x": 0.4, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '6'
+			pos_hint: {"center_x": 0.6, "center_y": 0.45}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'B'
+			pos_hint: {"center_x": 0.8, "center_y": 0.45}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '7'
+			pos_hint: {"center_x": 0.2, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '8'
+			pos_hint: {"center_x": 0.4, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '9'
+			pos_hint: {"center_x": 0.6, "center_y": 0.3}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'C'
+			pos_hint: {"center_x": 0.8, "center_y": 0.3}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '*'
+			pos_hint: {"center_x": 0.2, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '0'
+			pos_hint: {"center_x": 0.4, "center_y": 0.15}
+			background_normal: ''
+			background_color: (0.0, 0.25, 1.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: '#'
+			pos_hint: {"center_x": 0.6, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		KeyButton:
+			text: 'D'
+			pos_hint: {"center_x": 0.8, "center_y": 0.15}
+			background_normal: ''
+			background_color: (1.0, 0.0, 0.0, 1.0)
+			on_release:
+				root.on_keyboard(self)
+
+		MyImage:
+			source: 'Images/m1.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+
+		Label:
+			text: ''
+			halign: 'right'
+    		valign: 'middle'
+			id: label_pin
+			font_size: '20sp'
+			pos_hint: {"center_x": 0.5, "center_y": 0.75}
+
+		SendButton:
+			pos_hint: {"center_x": 0.15, "center_y": 0.75}
+			on_release: 
+				root.send_pin()
+
+		ArrowButton:
+			on_release: 
+				root.manager.transition.direction = "right"
+				root.manager.current = "machine3"
+<AddEmployee>:
+	on_leave: 
+		root.leave_screen()
+	FloatLayout:
+		orientation: 'vertical'
+		Background_IMG
+
+		MyImage:
+			source: 'Images/new_emp.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.90}
+			size_hint: 0.8, 0.8
+
+		TextInput:
+			id: first
+			text: ''
+			on_text_validate: root.hide_menu()
+			font_size: 25
+			multiline: False
+			size_hint: 0.4, 0.05
+			pos_hint: {"center_x": 0.5, "center_y": 0.65}
+
+		MyImage:
+			source: 'Images/first_name.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.71}
+			size_hint: 0.4, 0.4
+
+		TextInput:
+			id: last
+			text: ''
+			on_text_validate: root.hide_menu()
+			font_size: 25
+			multiline: False
+			size_hint: 0.4, 0.05
+			pos_hint: {"center_x": 0.5, "center_y": 0.44} 
+
+		MyImage:
+			source: 'Images/last_name.png'
+			pos_hint: {"center_x": 0.5, "center_y": 0.50} 
+			size_hint: 0.4, 0.4
+
+		Button:
+            text: 'Take picture from camera'
+            font_size: 23
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            size_hint: 0.4, 0.05
+            on_press: root.do_capture()
+
+		SendButton:
+			pos_hint: {"center_x": 0.5, "center_y": 0.15} 
+			on_release: 
+				root.send_form()
+
+		ArrowButton:
+			on_release: 
+				root.manager.transition.direction = "right"
+				root.manager.current = "menu"
+
+<MsgPopup>:
+    size_hint: .5, .3
+    title: "Attention"
+    
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 20
+
+        Label:
+            id: message_label
+            font_size: 20
+            size_hint_y: 0.4
+            text: "Label"
+        Button:
+            text: 'Dismiss'
+            size_hint_y: 0.4
+            on_press: root.dismiss()
