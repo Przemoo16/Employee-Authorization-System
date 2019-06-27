@@ -52,6 +52,7 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 <p align="center">
 <img src="/Images/5.png" width="260" height="540" />
 <img src="/Images/6.png" width="260" height="540" />
+<img src="/Images/7.png" width="260" height="540" />
 </p>
 </center>
 
