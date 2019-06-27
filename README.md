@@ -9,7 +9,11 @@ A person who wants to get into a room with a specific one device must be authori
 
 The system is controlled a mobile application. Thanks to app it is possible to change the PIN and security code of the given machine and to add a new employee.
 
-![Door](/Images/door.JPG)
+<center>
+<p>
+<img src="/Images/door.JPG"/>
+</p>
+</center>
 
 ## Application build
 
@@ -35,12 +39,27 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 
 ### Images
 
-![Image 1](/Images/1.png)
-![Image 2](/Images/2.png) 
-![Image 3](/Images/3.JPG)
-![Image 4](/Images/4.JPG)
-![Image 5](/Images/5.png)
-![Image 6](/Images/6.png)
+<center>
+<p>
+<img src="/Images/1.png"/>
+<img src="/Images/2.png"/>
+</p>
+</center>
+
+<center>
+<p>
+<img src="/Images/3.JPG"/>
+<img src="/Images/4.JPG"/>
+</p>
+</center>
+
+<center>
+<p>
+<img src="/Images/5.png"/>
+<img src="/Images/6.png"/>
+</p>
+</center>
+
 
 ## Requirements
 
