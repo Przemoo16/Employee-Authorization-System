@@ -37,22 +37,19 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 
 ### Images
 
-<center>
-<p>
+<p align="center">
 <img src="/Images/1.png" width="400" height="300" />
 <img src="/Images/2.png" width="400" height="300" />
 </p>
 </center>
 
-<center>
-<p>
-<img src="/Images/3.JPG" width="868" height="548" />
-<img src="/Images/4.JPG" width="868" height="548" />
+<p align="center">
+<img src="/Images/3.JPG" width="768" height="448" />
+<img src="/Images/4.JPG" width="768" height="448" />
 </p>
 </center>
 
-<center>
-<p>
+<p align="center">
 <img src="/Images/5.png" width="260" height="540" />
 <img src="/Images/6.png" width="260" height="540" />
 </p>
