@@ -38,8 +38,8 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 ### Images
 
 <p align="center">
-<img src="/Images/1.png" width="400" height="300" />
-<img src="/Images/2.png" width="400" height="300" />
+<img src="/Images/1.png" width="615" height="465" />
+<img src="/Images/2.png" width="615" height="465" />
 </p>
 </center>
 
