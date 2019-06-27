@@ -27,7 +27,7 @@ First, turn on Arduino and upload the program to it.
 
 Then, run server.py on PC. The console displays the address where the server listens for connections.
 
-Next, change IP's in client\\_cam.py and client\\_door.py and run it on two Raspberry Pi.
+Next, change IP's in client\_cam.py and client\_door.py and run it on two Raspberry Pi.
 
 ## How to use mobile app
 
@@ -41,7 +41,6 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 ![Image 4](/Images/4.JPG)
 ![Image 5](/Images/5.png)
 ![Image 6](/Images/6.png)
-![Image 7](/Images/7.png)
 
 ## Requirements
 
