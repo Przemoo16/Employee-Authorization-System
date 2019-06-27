@@ -218,7 +218,7 @@ sess = tf.Session(graph=graph)
 
 img_rep = []
 
-img1 = crop_face('test_img/me.png')
+img1 = crop_face('Rec_images/me.png')
 
 img_representation = np.array(sess.run(['flatten:0'], feed_dict={'x:0': img1}))
 img_representation = np.reshape(img_representation, (-1,))
