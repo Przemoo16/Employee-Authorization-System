@@ -9,11 +9,7 @@ A person who wants to get into a room with a specific one device must be authori
 
 The system is controlled a mobile application. Thanks to app it is possible to change the PIN and security code of the given machine and to add a new employee.
 
-<center>
-<p>
-<img src="/Images/door.JPG" width="400" height="300" />
-</p>
-</center>
+![Door](/Images/door.JPG)
 
 ## Application build
 
