@@ -48,15 +48,15 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 
 <center>
 <p>
-<img src="/Images/3.JPG"/>
-<img src="/Images/4.JPG"/>
+<img src="/Images/3.JPG" width="400" height="300" />
+<img src="/Images/4.JPG" width="400" height="300" />
 </p>
 </center>
 
 <center>
 <p>
-<img src="/Images/5.png"/>
-<img src="/Images/6.png"/>
+<img src="/Images/5.png" width="400" height="300" />
+<img src="/Images/6.png" width="400" height="300" />
 </p>
 </center>
 
