@@ -11,7 +11,7 @@ The system is controlled a mobile application. Thanks to app it is possible to c
 
 <center>
 <p>
-<img src="/Images/door.JPG"/>
+<img src="/Images/door.JPG" />
 </p>
 </center>
 
