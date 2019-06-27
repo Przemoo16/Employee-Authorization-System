@@ -35,11 +35,13 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 
 ### Images
 
-![Image 1](/Images/1.jpg)
-![Image 2](/Images/2.jpg) 
+![Image 1](/Images/1.png)
+![Image 2](/Images/2.png) 
 ![Image 3](/Images/3.jpg)
 ![Image 4](/Images/4.jpg)
-![Image 5](/Images/5.jpg)
+![Image 5](/Images/5.png)
+![Image 6](/Images/6.png)
+![Image 7](/Images/7.png)
 
 ## Requirements
 
