@@ -11,7 +11,7 @@ The system is controlled a mobile application. Thanks to app it is possible to c
 
 <center>
 <p>
-<img src="/Images/door.JPG" />
+<img src="/Images/door.JPG" width="400" height="300" />
 </p>
 </center>
 
@@ -41,8 +41,8 @@ In mobile appplication after pressing the WI-Fi logo, it is possible to connect 
 
 <center>
 <p>
-<img src="/Images/1.png"/>
-<img src="/Images/2.png"/>
+<img src="/Images/1.png" width="400" height="300" />
+<img src="/Images/2.png" width="400" height="300" />
 </p>
 </center>
 
