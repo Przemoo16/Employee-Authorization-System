@@ -42,7 +42,7 @@ Then, turn on Arduino and upload the **rfid.ino** to it.
 
 Next, run **server.py** on PC. The console displays the address where the server listens for connections.
 
-At the end, change IP's in **client\_cam.py** and **client\_door.py** and run it on two Raspberry Pi.
+At the end, change the IP address in **client\_cam.py** and **client\_door.py** to the server address and run it on two Raspberry Pi.
 
 ## How to use mobile app
 
