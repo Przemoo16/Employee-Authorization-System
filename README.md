@@ -26,15 +26,15 @@ If you want to change something in the code, you have to build the application a
 
 ## How to run
 
-Download weights for and face landmarks for neural network: 
+First, Download weights and face landmarks for neural network: 
 * [Weights](https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view).
 * [Face Landmarks](https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat).
 
-First, turn on Arduino and upload the program to it.
+Then, turn on Arduino and upload the program to it.
 
-Then, run server.py on PC. The console displays the address where the server listens for connections.
+Next, run server.py on PC. The console displays the address where the server listens for connections.
 
-Next, change IP's in client\_cam.py and client\_door.py and run it on two Raspberry Pi.
+At the end, change IP's in client\_cam.py and client\_door.py and run it on two Raspberry Pi.
 
 ## How to use mobile app
 
