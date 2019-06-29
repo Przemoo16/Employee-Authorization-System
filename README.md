@@ -5,9 +5,10 @@ it can be individually tailored to each employee. The design consists of a dummy
 * PIN code
 * RFID card reader
 * System face recognition
-A person who wants to get into a room with a specific one device must be authorized by the selected security. At the moment of successful verification, the doors are opened.
 
-The system is controlled a mobile application. Thanks to app it is possible to change the PIN and security code of the given machine and to add a new employee.
+A person who wants to get into a room with a specific device must be authorized by the selected security. At the moment of successful verification, the doors are opened.
+
+The system is controlled by a mobile application. Thanks to app it is possible to change the PIN and security code of the given machine and to add a new employee.
 
 <p align="center">
   <img src="/Images/door.JPG" width="500" height="800" />
@@ -33,7 +34,7 @@ Next, change IP's in client\_cam.py and client\_door.py and run it on two Raspbe
 
 ## How to use mobile app
 
-In mobile appplication after pressing the WI-Fi logo, it is possible to connect to the server that is on the robot. After the correct connection, the tick icon will appear. In the main menu there is a possibility to choose 4 keys (3 machines and adding a new employee). After selecting a particular machine, it is possible to change the security. It is possible to add a new employee by entering his name and taking a face photo.
+In mobile appplication after pressing the WI-Fi logo, it is possible to connect to the server that is on the PC. After the correct connection, the tick icon will appear. In the main menu there is a possibility to choose 4 keys (3 machines and adding a new employee). After selecting a particular machine, it is possible to change the security. You can add a new employee by entering his name and taking a face photo.
 
 ### Images
 
