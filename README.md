@@ -16,7 +16,11 @@ The system is controlled by a mobile application. Thanks to app it is possible t
 
 ## Neural network
 
-The TensorFlow library was used to implement the neural network. All architecture network was built from scratch. In order to save many days of training pre-trained weights were imported into the created model. The network architecture has been built on the basis of the **VGG-Face network**. The **One Shot Learning** method was used to recognize the face.  
+The TensorFlow library was used to implement the neural network. All architecture network was built from scratch. In order to save many days of training pre-trained weights were imported into the created model. The network architecture has been built on the basis of the **VGG-Face network**. The **One Shot Learning** method was used to recognize the face. 
+
+<p align="center">
+  <img src="/Images/nn.jpg" />
+</p> 
 
 ## Application build
 
