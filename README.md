@@ -26,6 +26,10 @@ If you want to change something in the code, you have to build the application a
 
 ## How to run
 
+Download weights for and face landmarks for neural network: 
+* [Weights](https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view).
+* [Face Landmarks](https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat).
+
 First, turn on Arduino and upload the program to it.
 
 Then, run server.py on PC. The console displays the address where the server listens for connections.
@@ -34,7 +38,7 @@ Next, change IP's in client\_cam.py and client\_door.py and run it on two Raspbe
 
 ## How to use mobile app
 
-In mobile appplication after pressing the WI-Fi logo, it is possible to connect to the server that is on the PC. After the correct connection, the tick icon will appear. In the main menu there is a possibility to choose 4 keys (3 machines and adding a new employee). After selecting a particular machine, it is possible to change the security. You can add a new employee by entering his name and taking a face photo.
+In mobile appplication after pressing the WI-Fi logo, you connect to the server that is on the PC. After the correct connection, the tick icon will appear. In the main menu there is a possibility to choose 4 keys (3 machines and adding a new employee). After selecting a particular machine, you can change the security. It is possible to add a new employee by entering his name and taking a face photo.
 
 ### Images
 
