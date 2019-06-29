@@ -9,8 +9,8 @@ import numpy as np
 import time
 from PIL import Image
 
-import hash_pass
-import neural_network
+from utils_folder import hash_pass
+from utils_folder import neural_network
 
 image = []
 new_face_img = []

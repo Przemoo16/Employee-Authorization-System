@@ -3,9 +3,9 @@ import numpy as np
 import cv2
 import h5py
 import dlib
-from utils import extract_left_eye_center, extract_right_eye_center, get_rotation_matrix, crop_image
+from .utils import extract_left_eye_center, extract_right_eye_center, get_rotation_matrix, crop_image
 
-hdf = h5py.File('vgg_face_weights.h5', 'r')
+hdf = h5py.File('utils_folder/vgg_face_weights.h5', 'r')
 
 conv1_1_W = np.array(hdf['conv1_1/conv1_1_2/kernel:0'])
 conv1_1_B = np.array(hdf['conv1_1/conv1_1_2/bias:0'])
@@ -206,7 +206,7 @@ def crop_cam(img):
 
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("utils_folder/shape_predictor_68_face_landmarks.dat")
 
 person = 0
 
@@ -218,7 +218,7 @@ sess = tf.Session(graph=graph)
 
 img_rep = []
 
-img1 = crop_face('Rec_images/me.png')
+img1 = crop_face('utils_folder/rec_images/me.png')
 
 img_representation = np.array(sess.run(['flatten:0'], feed_dict={'x:0': img1}))
 img_representation = np.reshape(img_representation, (-1,))
