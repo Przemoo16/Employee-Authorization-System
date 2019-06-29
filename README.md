@@ -14,6 +14,10 @@ The system is controlled by a mobile application. Thanks to app it is possible t
   <img src="/Images/door.JPG" width="500" height="800" />
 </p>
 
+## Neural network
+
+The TensorFlow library was used to implement the neural network. All architecture network was built from scratch. In order to save many days of training pre-trained weights were imported into the created model. The network architecture has been built on the basis of the **VGG-Face network**. The **One Shot Learning** method was used to recognize the face.  
+
 ## Application build
 
 The easiest way is to install the file my_app.apk.
@@ -26,7 +30,7 @@ If you want to change something in the code, you have to build the application a
 
 ## How to run
 
-First, Download weights and face landmarks for neural network: 
+First, download weights and face landmarks for neural network: 
 * [Weights](https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view).
 * [Face Landmarks](https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat).
 
