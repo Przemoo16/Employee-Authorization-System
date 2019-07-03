@@ -34,17 +34,17 @@ If you want to change something in the code, you have to build the application a
 
 ## How to run
 
-First, download weights and face landmarks for neural network: 
+1. First, download weights and face landmarks for neural network: 
 * [Weights](https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view).
 * [Face Landmarks](https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat)
 
 And put them into utils_folder.
 
-Then, turn on Arduino and upload the **rfid.ino** to it.
+2. Then, turn on Arduino and upload the **rfid.ino** to it.
 
-Next, run **server.py** on PC. The console displays the address where the server listens for connections.
+3. Next, run **server.py** on PC. The console displays the address where the server listens for connections.
 
-At the end, change the IP address in **client\_cam.py** and **client\_door.py** to the server address and run programs on two Raspberry Pi.
+4. At the end, change the IP address in **client\_cam.py** and **client\_door.py** to the server address and run programs on two Raspberry Pi.
 
 ## How to use mobile app
 
