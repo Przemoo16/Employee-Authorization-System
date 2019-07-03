@@ -36,7 +36,8 @@ If you want to change something in the code, you have to build the application a
 
 First, download weights and face landmarks for neural network: 
 * [Weights](https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view).
-* [Face Landmarks](https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat).
+* [Face Landmarks](https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat)
+
 And put them into utils_folder.
 
 Then, turn on Arduino and upload the **rfid.ino** to it.
